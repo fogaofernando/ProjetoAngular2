@@ -11,6 +11,8 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { SwitchCaseComponent } from './switch-case/switch-case.component';
+import { NgForComponent } from './ng-for/ng-for.component';
+import { NgClassComponent } from './ng-class/ng-class.component';
 
 @NgModule({
   declarations: [               //Todas as classes e componentes que iremos usar
@@ -20,7 +22,9 @@ import { SwitchCaseComponent } from './switch-case/switch-case.component';
     PropertyBindingComponent,
     TwoWayBindingComponent,
     NgIfComponent,
-    SwitchCaseComponent
+    SwitchCaseComponent,
+    NgForComponent,
+    NgClassComponent
   ],
   imports: [                    //Módulos importados para o nosso projeto usar
     BrowserModule,

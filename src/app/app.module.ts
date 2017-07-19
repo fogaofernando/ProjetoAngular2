@@ -13,6 +13,8 @@ import { NgIfComponent } from './ng-if/ng-if.component';
 import { SwitchCaseComponent } from './switch-case/switch-case.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
+import { NgStyleComponent } from './ng-style/ng-style.component';
+import { NgContentComponent } from './ng-content/ng-content.component';
 
 @NgModule({
   declarations: [               //Todas as classes e componentes que iremos usar
@@ -24,7 +26,9 @@ import { NgClassComponent } from './ng-class/ng-class.component';
     NgIfComponent,
     SwitchCaseComponent,
     NgForComponent,
-    NgClassComponent
+    NgClassComponent,
+    NgStyleComponent,
+    NgContentComponent
   ],
   imports: [                    //Módulos importados para o nosso projeto usar
     BrowserModule,

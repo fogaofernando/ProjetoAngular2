@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgClassComponent implements OnInit {
 
+  valorClassBinding: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  mudarClassBinding(){
+    this.valorClassBinding = !this.valorClassBinding;
+  }
+
+  classes():any{
+    
+    let valores = {
+      'cor-fundo':this.valorClassBinding,
+      'cor-letra': this.valorClassBinding,
+      'estilo-letra':this.valorClassBinding,
+      'borda-paragrafo':this.valorClassBinding
+    }
+  
+    return valores;
+    
   }
 
 }

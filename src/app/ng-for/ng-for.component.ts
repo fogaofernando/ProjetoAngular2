@@ -18,8 +18,8 @@ export class NgForComponent implements OnInit {
   ngOnInit() {
   }
 
-  meuSave(index: number, pessoas: any){
-    return pessoas.id;
+  meuSave(index: number, pessoas: any){  //Verifica se já existe esse objeto no template,
+    return pessoas.id;                   //Isso evita que o template seja atualizado de forma desnecessária
   }
 
   atualizar():void{

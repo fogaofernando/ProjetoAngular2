@@ -1,0 +1,20 @@
+<h2>
+  ng-style
+</h2>
+
+<p [style.font-size]="30+'px'">Valor fixo na tela</p>
+<p [style.font-size]="valorFonte">Valor dinâmico do style</p>
+<br>
+<button (click)="incrementarFonte()">Incrementar fonte</button>
+
+<!--
+<p [style.font-size]=" validaFonte ? 'x-large' : 'smaller' "
+[style.color]="validaCor ? 'red' : 'blue'">mudar valor com condição ternária</p>
+-->
+
+
+<p [ngStyle]="{'font-size':validaFonte ? 'x-large' : 'smaller',
+  'color': validaCor ? 'red' : 'blue'}">mudar valor com condição ternária</p>
+
+<button (click)="mudarFonte()">mudarFonte</button>
+<button (click)="mudarCor()">mudarCor</button>

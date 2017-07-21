@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventBindingComponent implements OnInit {
 
+  habilitarBotao:boolean = false;
+  listaItens:string[]=[];
+
   constructor() { }
 
   ngOnInit() {
@@ -25,8 +28,25 @@ export class EventBindingComponent implements OnInit {
   }
 
 
-  validaSenha(qtdSenha):void{
-    console.log(qtdSenha);  
+  validaSenha(valor:string):void{
+    
+    if(valor.length>5){
+      this.habilitarBotao = true;
+    }else{
+      this.habilitarBotao = false;
+    }
+
+  }
+
+  gravarSenha(senha):void{
+    alert('senha gravada com sucesso. Senha: '+senha);
   }
   
+  adicionarLista(valor):void{
+    this.listaItens.push(valor);
+  }
+
+  removerLista(i:number):void{
+    this.listaItens.pop(i);
+  }
 }

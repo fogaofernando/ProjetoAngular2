@@ -4,6 +4,20 @@
 
 <button (click)="meuClick()">Click aqui</button>
 <input (keyup)="digitou($event)">
+
+<br>
 <input #valorInput (keyup)= "digitouVarTemplate(valorInput.value)">
 
+<br>
 <input type="password" #qtdSenha (keyup)="validaSenha(qtdSenha.value)"> 
+<button [disabled]="!habilitarBotao" (click)=gravarSenha(qtdSenha.value)
+  >Gravar senha</button>
+
+<br>
+<input type="text" #conteudo (keyup.enter)="adicionarLista(conteudo.value);
+  conteudo.value=''">
+<ul>
+  <li *ngFor="let item of listaItens;let i=index">
+    {{i+1}} - {{item}}   <button (click)="removerLista(i)">Remover</button>
+  </li>
+</ul>

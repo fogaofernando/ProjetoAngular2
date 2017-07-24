@@ -2,7 +2,7 @@
   event-binding 
 </h2>
 
-<button (click)="meuClick()">Click aqui</button>
+<button (click)="meuClick()" type="button" class="btn btn-primary">Click aqui</button>
 <input (keyup)="digitou($event)">
 
 <br>
@@ -10,7 +10,7 @@
 
 <br>
 <input type="password" #qtdSenha (keyup)="validaSenha(qtdSenha.value)"> 
-<button [disabled]="!habilitarBotao" (click)=gravarSenha(qtdSenha.value)
+<button [disabled]="!habilitarBotao" class="btn" [ngClass]="{'btn-success': habilitarBotao , 'btn-warning':!habilitarBotao}" (click)=gravarSenha(qtdSenha.value)
   >Gravar senha</button>
 
 <br>
@@ -18,6 +18,12 @@
   conteudo.value=''">
 <ul>
   <li *ngFor="let item of listaItens;let i=index">
-    {{i+1}} - {{item}}   <button (click)="removerLista(i)">Remover</button>
+     {{i+1}}  -  <button class="btn btn-danger btn-sm" (click)="removerLista(i)">Remover</button>
+    {{item}}   
   </li>
 </ul>
+
+
+<br>
+<input type="text" #data (blur)="verIdade(data.value)">
+<p>{{(data.value=="")?' ':idade+" anos de idade"}}</p>

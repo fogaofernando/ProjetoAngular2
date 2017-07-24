@@ -9,6 +9,7 @@ export class EventBindingComponent implements OnInit {
 
   habilitarBotao:boolean = false;
   listaItens:string[]=[];
+  idade:number=0;
 
   constructor() { }
 
@@ -30,7 +31,7 @@ export class EventBindingComponent implements OnInit {
 
   validaSenha(valor:string):void{
     
-    if(valor.length>5){
+    if(valor.length>=5){
       this.habilitarBotao = true;
     }else{
       this.habilitarBotao = false;
@@ -47,6 +48,14 @@ export class EventBindingComponent implements OnInit {
   }
 
   removerLista(i:number):void{
-    this.listaItens.pop(i);
+    this.listaItens.splice(i,1);
   }
+
+
+  verIdade(valor:number):void{
+    let ano = new Date();
+    this.idade = ano.getFullYear() - valor;
+  
+  }
+
 }

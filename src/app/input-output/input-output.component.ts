@@ -1,4 +1,4 @@
-import { Component, OnInit , Input , Output , EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-input-output',
@@ -7,8 +7,8 @@ import { Component, OnInit , Input , Output , EventEmitter} from '@angular/core'
 })
 export class InputOutputComponent implements OnInit {
 
-  @Input() menu:string;
-  @Output() nomeClicado = new EventEmitter;
+  @Input() menu:string;                     //property-binding
+  @Output() nomeClicado = new EventEmitter; //event-binding
 
   constructor() { }
   ngOnInit() { }

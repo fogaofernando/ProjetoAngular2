@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NomeTecService  } from './nome-tec.service';
+import { MeuLogService } from './meu-log.service' ;
+
 
 @Component({
   selector: 'app-di',
@@ -7,8 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiComponent implements OnInit {
 
+  tecnologias :String [] = [];
+  meuService: NomeTecService;
+  meuLog: MeuLogService;
   
-  constructor() { }
+  constructor() { 
+    this.meuLog = new MeuLogService;
+    this.meuService = new NomeTecService(this.meuLog);
+    this.tecnologias = this.meuService.getNomesTec();
+  }
 
   ngOnInit() {
   }

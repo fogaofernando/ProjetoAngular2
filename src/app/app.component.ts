@@ -8,6 +8,7 @@ import { AlertaService } from './alerta.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  link:String =  "/if";
   valor: string;
   title = 'Livro Angular 2!';
   imgTitle:string = 'favicon.ico';
@@ -24,5 +25,13 @@ export class AppComponent {
     this.valor = valorPassado;
   }
 
+  rota(){
+    if(this.link=="/if"){
+      this.link = "/for";
+    }else{
+      this.link = "/if";
+    }
+
+  }
   
 }

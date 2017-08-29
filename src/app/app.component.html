@@ -1,7 +1,7 @@
-<h1>
+<!--<h1>
   {{title}}
 </h1>
-<!--<img [src]="imgTitle">
+<img [src]="imgTitle">
 <app-lista-pessoa></app-lista-pessoa>
 
 <button (click)="enviarMsg()">Enviar alerta</button>
@@ -25,7 +25,10 @@
 <app-input-output [menu]="desenvolvimento" 
 (nomeClicado)="valorPassado($event)"></app-input-output>
 <p>Você clicou em: {{valor}}</p>
-
 <app-formulario></app-formulario>
--->
-<app-di></app-di>
+->
+<app-di></app-di>-->
+
+<button routerLink={{link}} (click)="rota()" routerLinkActive="inactive"> Rotas </button>
+<router-outlet></router-outlet>
+

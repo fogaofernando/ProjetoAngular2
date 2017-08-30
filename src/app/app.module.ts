@@ -13,7 +13,7 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { SwitchCaseComponent } from './switch-case/switch-case.component';
 import { NgForComponent } from './ng-for/ng-for.component';
-import { NgClassComponent } from './ng-class/ng-class.component';
+//import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
 import { NgContentComponent } from './ng-content/ng-content.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
@@ -21,22 +21,26 @@ import { InputOutputComponent } from './input-output/input-output.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { DiComponent } from './di/di.component';
 
+ 
 
-import { RouterModule, Routes } from '@angular/router';
+//import { RouterModule, Routes } from '@angular/router';
+
+import { RoutingModule } from './app-routing';
+import { NgClassModule } from './ng-class/ng-class.module';
 
 
+/*
 const appRoutes: Routes = [
-  {path :'if', component : NgIfComponent},
-  {path :'for', component : NgForComponent},
-  
+  /*{path :'if', component : NgIfComponent},
+  {path :'for', component : NgForComponent},/
   { 
     path: '',
     redirectTo: 'for', //página inicial
     pathMatch: 'full'
   }
-  /*{ path: '**', component: PageNotFoundComponent }*/
+  /*{ path: '**', component: PageNotFoundComponent }/
 ]
-
+*/
 
 @NgModule({
   declarations: [               //Todas as classes e componentes que iremos usar
@@ -48,7 +52,7 @@ const appRoutes: Routes = [
     NgIfComponent,
     SwitchCaseComponent,
     NgForComponent,
-    NgClassComponent,
+    //NgClassComponent,
     NgStyleComponent,
     NgContentComponent,
     EventBindingComponent,
@@ -57,13 +61,15 @@ const appRoutes: Routes = [
     DiComponent
   ],
   imports: [                    //Módulos importados para o nosso projeto usar
-    RouterModule.forRoot(
+    /*RouterModule.forRoot(
       appRoutes
-    ),
+    ),*/
 
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    NgClassModule,
+    RoutingModule
   ],
   providers: [AlertaService,NomeTecService],    //Todos os serviços disponíveis na aplicação
   bootstrap: [AppComponent]      //Diz ao angular onde começar a renderizar

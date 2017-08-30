@@ -14,7 +14,6 @@ export class AppComponent {
   imgTitle:string = 'favicon.ico';
   desenvolvimento:string[] = ['Angular 2','JavaScript','TypeScript','HTML','CSS'];
 
-
   constructor(private service:AlertaService){}
 
   enviarMsg():void{
@@ -23,15 +22,6 @@ export class AppComponent {
 
   valorPassado(valorPassado){
     this.valor = valorPassado;
-  }
-
-  rota(){
-    if(this.link=="/if"){
-      this.link = "/for";
-    }else{
-      this.link = "/if";
-    }
-
   }
   
 }
